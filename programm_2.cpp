@@ -237,7 +237,7 @@ static void values_print(const std::vector<uint64_t> & vector_1, const std::vect
 {
     for(uint64_t index = 0; index < vector_summ_vectors_1_2.size(); index++)
     {
-        std::cout << vector_1[index] << " + " << vector_1[index] << " = "<< vector_summ_vectors_1_2[index] << (((index & 0x07) == 0x07) ? "\n" : ";  ");
+        std::cout << vector_1[index] << " + " << vector_2[index] << " = "<< vector_summ_vectors_1_2[index] << (((index & 0x07) == 0x07) ? "\n" : ";  ");
     }
     std::cout << "\n";
 }
