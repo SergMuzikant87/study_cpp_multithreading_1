@@ -84,6 +84,7 @@ void decrement(volatile int & count, uint32_t interval_microseconds, uint32_t fi
         std::this_thread::sleep_for(std::chrono::microseconds(interval_microseconds));
         resource_safe.resource_buzy_set();
         count -= 1;
+        std::cout << "Вопрос клиента решен. Количество клиентов в очереди = " << count << "\n";
         if(count <= 0)
         {
             is_opened.store(false);
@@ -91,7 +92,6 @@ void decrement(volatile int & count, uint32_t interval_microseconds, uint32_t fi
             resource_safe.resource_free_set();
             return;
         }
-        std::cout << "Вопрос клиента решен. Количество клиентов в очереди = " << count << "\n";
         resource_safe.resource_free_set();
     }
 }
