@@ -74,7 +74,7 @@ int main(int argc, char * argv [])
     std::cout << std::string(97, '-') << std::endl;
     std::cout << "|               |               |              Время выполнения (наносекунд)                    |\n";
     std::cout << "|  Элементов    |    Потоков    |---------------------------------------------------------------|\n";
-    std::cout << "|               |               | за 1-й проход |    минимум    |   максимум    |    среднее    |\n";
+    std::cout << "|               |               | первый проход |    минимум    |   максимум    |    среднее    |\n";
     std::cout << std::string(97, '-') << std::endl;
 
     for(elements_count = ELEMENTS_COUNT_MINIMUM; elements_count <= ELEMENTS_COUNT_MAXIMUM; elements_count *= ((uint64_t)10))
